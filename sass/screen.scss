@@ -1,0 +1,374 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@import url(http://fonts.googleapis.com/css?family=VT323);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+*, *:before, *:after {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+  	box-sizing: border-box;
+}
+*:focus, input { outline: none; }
+
+$middle-grey:#3e4649;
+$dark-grey:#262626;
+
+$panel-size: 200px;
+
+@mixin font-sans { font-family: 'Open Sans', sans-serif; }
+@mixin font-pixel { font-family: 'VT323', cursive; }
+
+body,html {
+	min-height: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: $middle-grey;
+}
+
+input[type="checkbox"].opener { 
+	display: none; 
+	& + label {
+		@include font-sans;
+		font-size: 18px;
+		text-align: center;
+		content: '+';
+		width: 24px; height: 26px;
+		color:$middle-grey;
+		background:rgba($dark-grey,0.7);
+		position: fixed;
+		transition:transform 0.3s, background 0.3s;
+		cursor: pointer;
+		z-index: 99;
+		&:hover{ 
+			background:lighten($dark-grey,2);
+		}
+		&:hover + aside:after { opacity:.1; }
+		&:after, &:before{
+			content:'';
+			width: 12px;
+			height: 3px;
+			background:$middle-grey;
+			position:absolute;
+			right: 50%;
+			margin-right: -6px;
+			top: 50%;
+			margin-top: -2px;
+		}
+		&:before{
+			transform: rotate(90deg);
+		}
+	}
+	&:checked + label:before{
+		opacity: 0;
+	}
+}
+
+label[for="open-ps"] {
+	left: $panel-size;
+	top:50%;
+	margin-top: -12px;
+	transform:translateX(-($panel-size - 20));
+	&:hover, &:hover + aside { transform: translateX(-($panel-size - 23)) }
+}
+input[type="checkbox"][name="open-ps"]:checked ~ .presets, input[type="checkbox"][name="open-ps"]:checked + label {
+	transform:translateX(0px);
+}
+
+label[for="open-pr"] {
+	right: $panel-size;
+	top:50%;
+	margin-top: -12px;
+	transform:translateX($panel-size);
+	&:hover, &:hover + aside { transform: translateX($panel-size - 10) }
+}
+input[type="checkbox"][name="open-pr"]:checked ~ .preview, input[type="checkbox"][name="open-pr"]:checked + label {
+	transform:translateX(0px);
+}
+
+label[for="open-code"] {
+	right: 50%;
+	bottom:$panel-size;
+	margin-right: -12px;
+	transform:translateY($panel-size);
+	height: 24px;
+	&:hover, &:hover + section { transform: translateY($panel-size - 10) }
+}
+input[type="checkbox"][name="open-code"]:checked ~ .code, input[type="checkbox"][name="open-code"]:checked + label {
+	transform:translateY(0px);
+}
+
+.presets, .preview {
+	width: $panel-size;
+	height: 100%;
+	background:rgba($dark-grey,0.7);
+	position: fixed;
+	transition:transform 0.3s;
+}
+.presets {
+	transform:translateX(-($panel-size - 20));
+	@include font-pixel;
+}
+
+#presets {
+	margin-top:70px;
+	button { 
+		border:0;
+		background:darken($middle-grey,7);
+		color:rgba(255,255,255,0.5);
+		cursor: pointer;
+		&:hover { background:$middle-grey; }
+	}
+	input{
+		height: 24px;
+		width: $panel-size;
+	}
+	button:not(#add-ps) {
+		width: 100%;
+		height: 24px;
+		text-align: right;
+		float: right;
+		margin: 0;
+		position:relative;
+		&::after {
+			content: '';
+			position:absolute;
+			bottom:-4px;
+			z-index: 70;
+			width: 0; height: 0;
+			border-top:4px solid darken($middle-grey,7);
+			border-right:4px solid transparent;
+			border-left:4px solid transparent;
+			right: 6px;
+		}
+		&:hover:after { border-top:6px solid $middle-grey; }
+	}
+}
+	.ps-title {
+		@include font-sans;
+		font-size:16px;	
+		color:rgba(255,255,255,0.5);
+		margin-left:20px;
+		margin-bottom:10px;
+	}
+	
+	#actualcolor {
+		width: 100%;
+		height: 20px;
+		position: absolute;
+		line-height: 20px;
+		text-align: center;
+		color:darken($middle-grey,7);
+		top: 0;
+		font-size: 12px;
+		right: 0;
+		background: #f00;
+		&:after {
+			content: '';
+			width: 12px; height: 12px;
+			background:rgba(darken($middle-grey,7),0.8);
+			position: absolute;
+			right: 4px;
+			top: 4px;
+		}
+	}
+
+header {
+	@include font-pixel;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	text-align: right;
+	transition:opacity 0.5s;
+	&.start {
+		opacity: 0;
+	}
+}
+	.page-title {
+		color:rgba(255,255,255,0.5);
+		font-size: 34px;
+		span { color:rgba(255,255,255,0.3); }
+	}
+	.page-subtitle {
+		color:rgba(255,255,255,0.3);
+		font-size: 16px;
+		a {
+			text-decoration: none;
+			color:rgba(255,255,255,0.5);
+		}
+	}
+
+.preview { 
+	transform:translateX($panel-size);
+	right: 0;
+	top: 0;
+}
+
+#initials {
+	@include font-sans;
+	font-size:12px;
+	position:fixed;
+	width: 320px;
+	height: 135px;
+	text-align: right;
+	left: 50%;
+	text-align: center;
+	top:40px;
+	margin-left: -165px;
+	background:lighten($dark-grey,5);
+	padding:50px 20px 15px 20px;
+	color:rgba(255,255,255,0.5);
+	transition:transform 0.5s;
+	opacity:0;
+	p {
+		text-align: center;
+		margin-bottom: 10px;
+		color:rgba(255,255,255,0.8);
+		position: absolute;
+		width: 100%;
+		background:red;
+		left: 0;
+		top: 0;
+		line-height: 30px;
+		background:$dark-grey;
+	}
+	input {
+		border:0;
+		width: 30px;
+		height: 25px;
+		text-align: center;
+		margin-right: 5px;
+		background:$middle-grey;
+		color:rgba(255,255,255,0.5);
+	}
+	label { margin-right:5px; }
+	input[type="submit"] {
+		border:0;
+		width: 100%;
+		margin-top: 15px;
+		height: 25px;
+		background:$middle-grey;
+		color:rgba(255,255,255,0.5);
+	}
+	&.close {
+		transform: translateY(-175px);
+	}
+}
+
+.refresher {
+	width: 50px;
+	height: 20px;
+	position: absolute;
+	color:rgba(255,255,255,0.2);
+	text-align: center;
+	@include font-pixel;
+	background:lighten($dark-grey,5);
+	top:0;
+	left: 50%;
+	margin-left: -25px;
+	opacity:0;
+	transition:opacity 0.3s 0.5s, background 0.3s, color 0.3s;
+	cursor:pointer;
+	&:hover {
+		background:rgba(255,0,0,0.3);
+		color:$dark-grey;
+	}
+}
+#initials.close + .refresher { opacity:1; }
+
+.main {
+	padding-left:60px;
+	padding-top:40px;
+	ul { width: 240px; list-style: none; margin: 0; padding: 0; }
+	li { 
+		width: 20px; 
+		height: 20px; 
+		float: left;
+		margin: 1px;
+	}
+
+	input[type="checkbox"] { display: none; }
+	input[type="checkbox"] + label{
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: rgba(0,0,0,0.1);
+		-webkit-transition:background .3s;
+	}
+}
+
+.code {
+	position:fixed;
+	width:100%;
+	height:$panel-size;
+	bottom:0;
+	left: 0;
+	transform:translateY($panel-size);
+	transition:transform 0.3s;
+	background:rgba($dark-grey,0.7);
+	padding:20px;
+	textarea {
+		width: 100%;
+		height: 100%;
+		background:rgba(255,255,255,0.1);
+		border:0;
+	}
+}
+
+.intro {
+	position: absolute;
+	@include font-pixel;
+	left: 50%;
+	width: 400px;
+	margin-left: -200px;
+	height: 100px;
+	top: 50%;
+	margin-top: -50px;
+	opacity:0;
+	&.start {
+		animation-name: fade-in-out;
+		animation-timing-function: ease-in-out;
+ 		animation-fill-mode: forwards;
+	}
+	&.step1{ 
+		animation-duration: 4s; 
+	}
+	&.step2{ animation-duration: 7s; animation-delay: 4s; }
+	&.step3{ animation-duration: 10s; animation-delay: 11s; }
+	&.step4{ animation-duration: 5s; animation-delay: 21s; }
+	&.step5{ animation-duration: 7s; animation-delay: 26s; }
+}
+
+	.intro .page-subtitle { font-size:30px; }
+	.intro.step1 {
+		width: 200px;
+		margin-left: -100px;
+		.page-subtitle { font-size:16px; }
+	}
+
+
+#initials { animation:fade-in 3s 5s forwards; }
+.presets.start, label[for="open-ps"].start { animation:slide-x 5s 12s; }
+.preview.start, label[for="open-pr"].start { animation:slide-x 3s 22s; }
+.code.start, label[for="open-code"].start { animation:slide-y 3s 27s; }
+
+@keyframes fade-in-out {
+	10% { opacity:0; }
+	20% { opacity:1; }
+	50% { opacity:1; }
+	80% { opacity:1; }
+	90% { opacity:0; }
+}
+
+@keyframes fade-in { to { opacity:1; } }
+@keyframes fade-out { to { opacity:0; } }
+@keyframes slide-x { 50% {	transform:translateX(0); } }
+@keyframes slide-y { 50% {	transform:translateY(0); } }
+
+
+
