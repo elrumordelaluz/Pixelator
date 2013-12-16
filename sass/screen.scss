@@ -183,7 +183,8 @@ header {
 	position:fixed;
 	bottom:20px;
 	right:20px;
-	text-align: right;
+	text-align: left;
+	padding-bottom: 30px;
 	transition:opacity 0.5s;
 	&.start {
 		opacity: 0;
@@ -224,7 +225,6 @@ header {
 	padding:50px 20px 15px 20px;
 	color:rgba(255,255,255,0.5);
 	transition:transform 0.5s;
-	opacity:0;
 	p {
 		text-align: center;
 		margin-bottom: 10px;
@@ -353,7 +353,10 @@ header {
 	}
 
 
-#initials { animation:fade-in 2s 5s forwards; }
+#initials.start {
+	opacity:0;
+	animation:fade-in 2s 5s forwards; 
+}
 .presets.start, label[for="open-ps"].start { animation:slide-x 5s 12s; }
 .preview.start, label[for="open-pr"].start { animation:slide-x 3s 22s; }
 .code.start, label[for="open-code"].start { animation:slide-y 3s 27s; }
@@ -368,8 +371,20 @@ header {
 
 @keyframes fade-in { to { opacity:1; } }
 @keyframes fade-out { to { opacity:0; } }
-@keyframes slide-x { 50% { transform:translateX(0); } }
-@keyframes slide-y { 50% { transform:translateY(0); } }
+@keyframes slide-x { 50% {	transform:translateX(0); } }
+@keyframes slide-y { 50% {	transform:translateY(0); } }
 
+
+.twitter-share-button{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#gh {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
 
 

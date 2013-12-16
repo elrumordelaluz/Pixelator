@@ -291,43 +291,44 @@ header {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  text-align: right;
+  text-align: left;
+  padding-bottom: 30px;
   transition: opacity 0.5s;
 }
-/* line 188, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 header.start {
   opacity: 0;
 }
 
-/* line 192, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .page-title {
   color: rgba(255, 255, 255, 0.5);
   font-size: 34px;
 }
-/* line 195, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .page-title span {
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .page-subtitle {
   color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
 }
-/* line 200, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .page-subtitle a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 206, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 .preview {
   transform: translateX(200px);
   right: 0;
   top: 0;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 #initials {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
@@ -343,7 +344,6 @@ header.start {
   padding: 50px 20px 15px 20px;
   color: rgba(255, 255, 255, 0.5);
   transition: transform 0.5s;
-  opacity: 0;
 }
 /* line 228, ../sass/screen.scss */
 #initials p {
@@ -525,50 +525,51 @@ header.start {
 }
 
 /* line 356, ../sass/screen.scss */
-#initials {
+#initials.start {
+  opacity: 0;
   animation: fade-in 2s 5s forwards;
 }
 
-/* line 357, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .presets.start, label[for="open-ps"].start {
   animation: slide-x 5s 12s;
 }
 
-/* line 358, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 .preview.start, label[for="open-pr"].start {
   animation: slide-x 3s 22s;
 }
 
-/* line 359, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 .code.start, label[for="open-code"].start {
   animation: slide-y 3s 27s;
 }
 
 @keyframes fade-in-out {
-  /* line 362, ../sass/screen.scss */
+  /* line 365, ../sass/screen.scss */
   10% {
     opacity: 0;
     visibility: hidden;
   }
 
-  /* line 363, ../sass/screen.scss */
+  /* line 366, ../sass/screen.scss */
   20% {
     opacity: 1;
     visibility: visible;
   }
 
-  /* line 364, ../sass/screen.scss */
+  /* line 367, ../sass/screen.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 365, ../sass/screen.scss */
+  /* line 368, ../sass/screen.scss */
   80% {
     opacity: 1;
     visibility: visible;
   }
 
-  /* line 366, ../sass/screen.scss */
+  /* line 369, ../sass/screen.scss */
   90% {
     opacity: 0;
     visibility: hidden;
@@ -576,29 +577,43 @@ header.start {
 }
 
 @keyframes fade-in {
-  /* line 369, ../sass/screen.scss */
+  /* line 372, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 
 @keyframes fade-out {
-  /* line 370, ../sass/screen.scss */
+  /* line 373, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 
 @keyframes slide-x {
-  /* line 371, ../sass/screen.scss */
+  /* line 374, ../sass/screen.scss */
   50% {
     transform: translateX(0);
   }
 }
 
 @keyframes slide-y {
-  /* line 372, ../sass/screen.scss */
+  /* line 375, ../sass/screen.scss */
   50% {
     transform: translateY(0);
   }
+}
+
+/* line 378, ../sass/screen.scss */
+.twitter-share-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 384, ../sass/screen.scss */
+#gh {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Pixelator by @elrumordelaluz</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script type="text/javascript"> 
 	  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-21983425-1']); _gaq.push(['_trackPageview']);
@@ -18,9 +19,13 @@
 	<header class="start" id="header">
 		<h1 class="page-title">Pixel<span>Art</span></h1>
 		<h3 class="page-subtitle">by <a href="http://www.twitter.com/elrumordelaluz">@elrumordelaluz</a></h3>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lab.elrumordelaluz.com/pixelator/" data-text="Make easy one-element css3 box-shadow PixelArt with pixelator" data-via="elrumordelaluz" data-hashtags="pixelator">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<iframe id="gh" src="http://ghbtns.com/github-btn.html?user=elrumordelaluz&repo=pixelator&type=fork"
+  allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
 	</header>
 
-	<div id="initials">
+	<div id="initials" class="start">
 		<p>Initial settings</p>
 		<form onsubmit="return init();">
 			<label for="setcol">Colums: </label><input type="text" id="setcol" value="20">
@@ -96,6 +101,8 @@
 		<textarea id="code"></textarea>
 	</section>
 	
+
+
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="js/jscolor/jscolor.js"></script>
