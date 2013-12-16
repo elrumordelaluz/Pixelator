@@ -330,6 +330,7 @@ header {
 	top: 50%;
 	margin-top: -50px;
 	opacity:0;
+	visibility:hidden;
 	&.start {
 		animation-name: fade-in-out;
 		animation-timing-function: ease-in-out;
@@ -352,23 +353,23 @@ header {
 	}
 
 
-#initials { animation:fade-in 3s 5s forwards; }
+#initials { animation:fade-in 2s 5s forwards; }
 .presets.start, label[for="open-ps"].start { animation:slide-x 5s 12s; }
 .preview.start, label[for="open-pr"].start { animation:slide-x 3s 22s; }
 .code.start, label[for="open-code"].start { animation:slide-y 3s 27s; }
 
 @keyframes fade-in-out {
-	10% { opacity:0; }
-	20% { opacity:1; }
+	10% { opacity:0; visibility:hidden; }
+	20% { opacity:1; visibility:visible; }
 	50% { opacity:1; }
-	80% { opacity:1; }
-	90% { opacity:0; }
+	80% { opacity:1; visibility:visible; }
+	90% { opacity:0; visibility:hidden; }
 }
 
 @keyframes fade-in { to { opacity:1; } }
 @keyframes fade-out { to { opacity:0; } }
-@keyframes slide-x { 50% {	transform:translateX(0); } }
-@keyframes slide-y { 50% {	transform:translateY(0); } }
+@keyframes slide-x { 50% { transform:translateX(0); } }
+@keyframes slide-y { 50% { transform:translateY(0); } }
 
 
 
