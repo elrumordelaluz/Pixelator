@@ -4,7 +4,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,45 +26,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../opt/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -476,123 +476,128 @@ header.start {
   top: 50%;
   margin-top: -50px;
   opacity: 0;
+  visibility: hidden;
 }
-/* line 333, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .intro.start {
   animation-name: fade-in-out;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-/* line 338, ../sass/screen.scss */
+/* line 339, ../sass/screen.scss */
 .intro.step1 {
   animation-duration: 4s;
 }
-/* line 341, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 .intro.step2 {
   animation-duration: 7s;
   animation-delay: 4s;
 }
-/* line 342, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 .intro.step3 {
   animation-duration: 10s;
   animation-delay: 11s;
 }
-/* line 343, ../sass/screen.scss */
+/* line 344, ../sass/screen.scss */
 .intro.step4 {
   animation-duration: 5s;
   animation-delay: 21s;
 }
-/* line 344, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
 .intro.step5 {
   animation-duration: 7s;
   animation-delay: 26s;
 }
 
-/* line 347, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 .intro .page-subtitle {
   font-size: 30px;
 }
 
-/* line 348, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 .intro.step1 {
   width: 200px;
   margin-left: -100px;
 }
-/* line 351, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .intro.step1 .page-subtitle {
   font-size: 16px;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 #initials {
-  animation: fade-in 3s 5s forwards;
+  animation: fade-in 2s 5s forwards;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 .presets.start, label[for="open-ps"].start {
   animation: slide-x 5s 12s;
 }
 
-/* line 357, ../sass/screen.scss */
+/* line 358, ../sass/screen.scss */
 .preview.start, label[for="open-pr"].start {
   animation: slide-x 3s 22s;
 }
 
-/* line 358, ../sass/screen.scss */
+/* line 359, ../sass/screen.scss */
 .code.start, label[for="open-code"].start {
   animation: slide-y 3s 27s;
 }
 
 @keyframes fade-in-out {
-  /* line 361, ../sass/screen.scss */
+  /* line 362, ../sass/screen.scss */
   10% {
     opacity: 0;
-  }
-
-  /* line 362, ../sass/screen.scss */
-  20% {
-    opacity: 1;
+    visibility: hidden;
   }
 
   /* line 363, ../sass/screen.scss */
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* line 364, ../sass/screen.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 364, ../sass/screen.scss */
+  /* line 365, ../sass/screen.scss */
   80% {
     opacity: 1;
+    visibility: visible;
   }
 
-  /* line 365, ../sass/screen.scss */
+  /* line 366, ../sass/screen.scss */
   90% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
 @keyframes fade-in {
-  /* line 368, ../sass/screen.scss */
+  /* line 369, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 
 @keyframes fade-out {
-  /* line 369, ../sass/screen.scss */
+  /* line 370, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 
 @keyframes slide-x {
-  /* line 370, ../sass/screen.scss */
+  /* line 371, ../sass/screen.scss */
   50% {
     transform: translateX(0);
   }
 }
 
 @keyframes slide-y {
-  /* line 371, ../sass/screen.scss */
+  /* line 372, ../sass/screen.scss */
   50% {
     transform: translateY(0);
   }
