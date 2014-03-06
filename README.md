@@ -11,8 +11,10 @@ I made something like this little tool I had in mind and here is (a working-prog
 
 Up to now it's possible to set the grid and the output pixel size.
 
-I have in mind lot of todos to apply.
+I have in mind lot of <a href="https://github.com/elrumordelaluz/Pixelator/issues/1">todos</a> to apply.
 I really want to know your comments to improve this tool.
+
+<strong>UPDATE: you could post your creating on <a href="http://codepen.io">Codepen</a></strong>
 
 
 Fast intro
