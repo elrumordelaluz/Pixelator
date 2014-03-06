@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pixelator by @elrumordelaluz</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<script type="text/javascript"> 
+	  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-21983425-1']); _gaq.push(['_trackPageview']);
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</head>
+<body>
+	
+	<header class="start" id="header">
+		<h1 class="page-title">Pixel<span>Art</span></h1>
+		<h3 class="page-subtitle">by <a href="http://www.twitter.com/elrumordelaluz">@elrumordelaluz</a></h3>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lab.elrumordelaluz.com/pixelator/" data-text="Make easy one-element css3 box-shadow PixelArt with pixelator" data-via="elrumordelaluz" data-count="none" data-hashtags="pixelator">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<iframe id="gh" src="http://ghbtns.com/github-btn.html?user=elrumordelaluz&repo=pixelator&type=fork"
+  allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
+	</header>
+
+	<div id="initials" class="start">
+		<p class="init-title">Initial settings</p>
+		<form onsubmit="return init();">
+			<label for="setcol">Colums: </label><input type="text" id="setcol" value="20">
+			<label for="setrow">Rows: </label><input type="text" id="setrow" value="20">
+			<label for="setrow">Pixel size: </label><input type="text" id="setpixel" value="5" onchange="handleChange(this)">
+			<input type="submit" id="settings" value="Create Grid &amp; Start!">
+		</form>
+		<a href="javascript:void(0)" id="help-opener">Need help?</a>
+		<div class="help" id="help">
+			<p>With this simple tool you could generate pixelArt one-element css box-shadow following these few steps:</p>
+			<ol>
+				<li>1. Simply create a grid depending on your needs and set the pixel size for the output. Then toggle the panels (left, right and bottom).</li>
+				<li>2. On the left side, set some color presets. You could add up to 13 and manage it just clicking on the number or triggering the numbero on the keyboard (only from 1 to 9).</li>
+				<li>3. On the right side, preview your one-element box-shadow generated.</li>
+				<li>4. On the bottom you could copy the CSS generated code.</li>
+			</ul>
+			<p>This is a beta release. Hope you enjoy it and appreciate your comments to improve this tool.</p>
+			<a href="http://twitter.com/elrumordelaluz">@elrumordelaluz</a>
+		</div>
+	</div>
+	<div class="refresher" onclick="location.reload();">Reset</div>
+	
+	<div class="intro step1 start" id="stp1">
+		<h1 class="page-title">Pixel<span>ator</span></h1>
+		<h3 class="page-subtitle">box-shadow pixel generator</h3>
+	</div>
+	<div class="intro step2 start" id="stp2">
+		<h3 class="page-subtitle">1. Start setting the grid of pixels you want.</h3>
+	</div>
+	<div class="intro step3 start" id="stp3">
+		<h3 class="page-subtitle">2. Add and manage color presets by clicking on the numbers or just triggering the keyboard number (only 1-9).</h3>
+	</div>
+	<div class="intro step4 start" id="stp4">
+		<h3 class="page-subtitle">3. Always you can preview it in real scale.</h3>
+	</div>
+	<div class="intro step5 start" id="stp5">
+		<h3 class="page-subtitle">4. Then, you could copy the generated CSS code.</h3>
+	</div>
+
+
+
+	<input type="checkbox" name="open-ps" id="open-ps" class="opener">
+	<label for="open-ps" id="openpresets" class="start"></label>
+	<aside class="presets start" id="ps">
+		<div id="presets">
+			<h3 class="ps-title">Presets <button id="add-ps" onclick="addPreset()">+</button></h3>
+			<div id="actualcolor">Color selected</div>
+			<div>
+				<button id="select-1" onclick="selectPreset(this)">1</button>
+				<input id="preset-1" class="color" name="preset-1" value="#1abc9c">
+			</div>
+			<div>
+				<button id="select-2" onclick="selectPreset(this)">2</button>
+				<input id="preset-2" class="color" name="preset-2" value="#3498db">
+			</div>
+			<div>
+				<button id="select-3" onclick="selectPreset(this)">3</button>
+				<input id="preset-3" class="color" name="preset-3" value="#9b59b6">
+			</div>
+			<div>
+				<button id="select-4" onclick="selectPreset(this)">4</button>
+				<input id="preset-4" class="color" name="preset-4" value="#e74c3c">
+			</div>
+			<div>
+				<button id="select-5" onclick="selectPreset(this)">5</button>
+				<input id="preset-5" class="color" name="preset-5" value="#f39c12">
+			</div>
+		</div>
+		
+	</aside>
+	
+	<section class="main">
+		<div id="init"></div>
+	</section>
+
+	<input type="checkbox" name="open-pr" id="open-pr" class="opener">
+	<label for="open-pr" id="openpreview"></label>
+	<aside class="preview start" id="preview">
+		<div id="result"></div>
+		<form action="http://codepen.io/pen/define" method="POST" target="_blank">
+			<input type="hidden" id="cdpn-data" name="data">
+			<input type="submit" class="codepen" id="codepen" value="view on Codepen">
+		</form>
+	</aside>
+	
+	<input type="checkbox" name="open-code" id="open-code" class="opener">
+	<label for="open-code" id="opencode" class="start"></label>
+	<section class="code start" id="cd">
+		<textarea id="code"></textarea>
+	</section>
+	
+
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/jscolor/jscolor.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
