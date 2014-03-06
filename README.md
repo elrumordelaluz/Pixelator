@@ -3,7 +3,7 @@ Pixelator
 
 A really simple tool to generate one element css box-shadow pixel style.
 
-Live demo: http://elrumordelaluz.github.io/Pixelator/
+<h3><a href="http://elrumordelaluz.github.io/Pixelator/">Live demo</a></h3>
 
 After made Marty McPixel (http://codepen.io/elrumordelaluz/pen/sHjrF), 
 it came to my mind the idea of a possible tool to generate this things without code.
