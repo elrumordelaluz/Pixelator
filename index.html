@@ -107,7 +107,7 @@
 		<div id="result"></div>
 		<form action="http://codepen.io/pen/define" method="POST" target="_blank">
 			<input type="hidden" id="cdpn-data" name="data">
-			<input type="submit" class="codepen" id="codepen" value="view on Codepen">
+			<input onClick="_gaq.push(['_trackEvent', 'Codepen', 'publish']);" type="submit" class="codepen" id="codepen" value="view on Codepen">
 		</form>
 	</aside>
 	
