@@ -14,7 +14,7 @@ Up to now it's possible to set the grid and the output pixel size.
 I have in mind lot of <a href="https://github.com/elrumordelaluz/Pixelator/issues/1">todos</a> to apply.
 I really want to know your comments to improve this tool.
 
-<strong>UPDATE: you could post your creating on <a href="http://codepen.io">Codepen</a></strong>
+<strong>UPDATE: you could post your creation on <a href="http://codepen.io">Codepen</a></strong>
 
 
 Fast intro
@@ -25,4 +25,4 @@ Fast intro
 4. Click on every pixel you want and pain the selected-color
 5. Preview the result element (with box-shadow) //Right side
 6. Copy the code generated // Bottom side
-7. Really appreciate if yout tweet me or comment to improve this first release...
+7. Just fire a tweet or comment to improve this first (baby) release...
