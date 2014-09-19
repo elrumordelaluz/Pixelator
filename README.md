@@ -25,4 +25,4 @@ Fast intro
 4. Click on every pixel you want and pain the selected-color
 5. Preview the result element (with box-shadow) //Right side
 6. Copy the code generated // Bottom side
-7. Just fire a tweet or comment to improve this first (baby) release...
+7. Just fire a tweet or comment to improve this first release.
