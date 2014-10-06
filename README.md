@@ -14,7 +14,7 @@ Up to now it's possible to set the grid and the output pixel size.
 I have in mind lot of todos to apply.
 I really want to know your comments to improve this tool.
 
-You could also easily create a pen on <a href="http://codepen.io">Codepen</a>
+You could also easily create a pen on <a href="http://codepen.io">Codepen</a> 
 
 Fast intro
 ==========
