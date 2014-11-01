@@ -14,7 +14,7 @@ Up to now it's possible to set the grid and the output pixel size.
 I have in mind lot of <a href="https://github.com/elrumordelaluz/Pixelator/issues/1">todos</a> to apply.
 Let's fire a <a href="https://twitter.com/elrumordelaluz">tweet</a> or a comment to improve this tool.
 
-You could also easily create a pen on <a href="http://codepen.io">Codepen</a>
+You could also easily create a pen on Codepen.
 
 
 Fast intro
